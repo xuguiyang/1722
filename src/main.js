@@ -7,13 +7,15 @@ import FastClick from 'fastclick'
 import 'assets/css/reset.css'
 import 'assets/css/iconfont/iconfont.css'
 // 轮播
-// import VueAwesomeSwiper from 'vue-awesome-swiper'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+// import style
 // import 'swiper/css/swiper.css'
 
+Vue.use(VueAwesomeSwiper)
 // 解决移动端某些手机的某些浏览器的click时间的300mm延迟时间
 FastClick.attach(document.body)
 
-// Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

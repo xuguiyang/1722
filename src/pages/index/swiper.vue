@@ -1,25 +1,21 @@
 <template>
   <div>
-    <index-header></index-header>
-    <Swiper></Swiper>
+    q
   </div>
 </template>
 
 <script>
-import IndexHeader from './header'
-import Swiper from './swiper'
 export default {
-  name: 'Index',
+  name: 'swiper',
   props: {
 
   },
   components: {
-    IndexHeader,
-    Swiper
+
   },
   data () {
     return {
-
+      swiperOptions: {}
     }
   },
   computed: {
