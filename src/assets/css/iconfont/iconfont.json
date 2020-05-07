@@ -1,0 +1,30 @@
+{
+  "id": "1804234",
+  "name": "1722",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6119218",
+      "name": "下-三角",
+      "font_class": "below-s",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "924512",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e93d",
+      "unicode_decimal": 59709
+    },
+    {
+      "icon_id": "1001281",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    }
+  ]
+}

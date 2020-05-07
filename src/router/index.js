@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+// import City from '@pages/city'
 
 Vue.use(Router)
 
@@ -8,8 +8,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Index',
+      meta: {
+        title: '主页'
+      },
+      component: () => import('@/pages/index')
+    },
+    {
+      path: '/city',
+      name: 'City',
+      meta: {
+        title: '城市'
+      },
+      component: () => import('@/pages/city')
     }
+
   ]
 })
