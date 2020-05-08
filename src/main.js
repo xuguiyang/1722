@@ -10,13 +10,13 @@ import 'assets/css/iconfont/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 // import style
-// import 'swiper/css/swiper.css'
+import 'swiper/css/swiper.css'
 
-Vue.use(VueAwesomeSwiper)
 // 解决移动端某些手机的某些浏览器的click时间的300mm延迟时间
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
