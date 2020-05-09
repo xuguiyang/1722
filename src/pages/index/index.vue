@@ -2,12 +2,14 @@
   <div>
     <index-header></index-header>
     <header-swiper :swiperList='swiperInfo'></header-swiper>
+    <index-icons :iconList="iconIfon"></index-icons>
   </div>
 </template>
 
 <script>
 import IndexHeader from './header'
 import HeaderSwiper from './homeswiper'
+import IndexIcons from './icons.vue'
 import axios from 'axios'
 export default {
   name: 'Index',
@@ -16,11 +18,13 @@ export default {
   },
   components: {
     IndexHeader,
-    HeaderSwiper
+    HeaderSwiper,
+    IndexIcons
   },
   data () {
     return {
-      swiperInfo: []
+      swiperInfo: [],
+      iconIfon: []
     }
   },
   computed: {
@@ -33,8 +37,8 @@ export default {
         .catch(this.handleGetDataErr.bind(this))
     },
     handleGetDataSucc (res) {
-      console.log(res.data.data.swiperList)
       this.swiperInfo = res.data.data.swiperList
+      this.iconIfon = res.data.data.iconList
     },
     handleGetDataErr () {
       console.log('err')
