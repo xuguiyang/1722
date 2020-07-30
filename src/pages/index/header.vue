@@ -8,7 +8,8 @@
       请输入搜索内容
     </div>
     <div class="city">
-      北京
+      <router-link to="/city/123">北京</router-link>
+      <!-- <span @click="handleCity">北京</span> -->
       <span class="icon iconfont ">&#xe627;</span>
     </div>
   </div>
@@ -32,7 +33,9 @@ export default {
 
   },
   methods: {
-
+    handleCity () {
+      this.$router.push('/city/123')
+    }
   },
   mounted () {
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-container">
+  <div class="icon-container" >
     <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pageList" :key="index">
         <div class="area-container">

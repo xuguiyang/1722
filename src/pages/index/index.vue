@@ -3,6 +3,8 @@
     <index-header></index-header>
     <header-swiper :swiperList='swiperInfo'></header-swiper>
     <index-icons :iconList="iconIfon"></index-icons>
+    <index-scroll></index-scroll>
+    <div @click="go"><button>btn</button></div>
   </div>
 </template>
 
@@ -10,7 +12,8 @@
 import IndexHeader from './header'
 import HeaderSwiper from './homeswiper'
 import IndexIcons from './icons.vue'
-import axios from 'axios'
+import IndexScroll from './scroll'
+// import axios from 'axios'
 export default {
   name: 'Index',
   props: {
@@ -19,7 +22,8 @@ export default {
   components: {
     IndexHeader,
     HeaderSwiper,
-    IndexIcons
+    IndexIcons,
+    IndexScroll
   },
   data () {
     return {
@@ -32,7 +36,8 @@ export default {
   },
   methods: {
     getIndexData () {
-      axios.get('/api/index.json')
+      this.$axios.get('/api/index.json')
+      // this.$axios.get('../../../static/index.json')
         .then(this.handleGetDataSucc.bind(this))
         .catch(this.handleGetDataErr.bind(this))
     },
@@ -42,6 +47,9 @@ export default {
     },
     handleGetDataErr () {
       console.log('err')
+    },
+    go () {
+      this.$router.push('/city/123')
     }
   },
   mounted () {

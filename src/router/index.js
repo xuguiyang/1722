@@ -15,13 +15,20 @@ export default new Router({
       component: () => import('@/pages/index')
     },
     {
-      path: '/city',
+      path: '/city/:id',
       name: 'City',
       meta: {
         title: '城市'
       },
       component: () => import('@/pages/city')
+    },
+    {
+      path: '/region/:id',
+      name: 'Region',
+      meta: {
+        title: '城市'
+      },
+      component: () => import('@/pages/region')
     }
-
   ]
 })

@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     getCityInfo () {
-      this.$axios.get('api/city.json?id=' + this.$route.params.id)
+      this.$axios.get('api/region.json?id=' + this.$route.params.id)
         .then(this.handleSucc.bind(this))
         .catch(this.handleErr.bind(this))
     },

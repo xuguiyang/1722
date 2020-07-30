@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import FastClick from 'fastclick'
+import axios from 'axios'
 import 'assets/css/reset.css'
 import 'assets/css/iconfont/iconfont.css'
 // 轮播
@@ -17,6 +18,7 @@ FastClick.attach(document.body)
 
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
+Vue.prototype.$axios = axios
 
 /* eslint-disable no-new */
 new Vue({
